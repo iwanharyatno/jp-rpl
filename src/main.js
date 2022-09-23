@@ -33,7 +33,7 @@ function main() {
     });
   });
   window.addEventListener(events.GAME_RESTART_EVENT, e => {
-    container.innerHTML = '<h1>Quiz Materi Bahasa Jepang</h1>';
+    container.innerHTML = '<h1>Kuis Kosakata Bahasa Jepang</h1>';
     container.appendChild(mainPage);
   });
 
