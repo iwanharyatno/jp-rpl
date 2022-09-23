@@ -1,28 +1,36 @@
 import { shufflePair } from './utils.js';
 
 import './styles/app.css';
+
+import './ui/components/spinner-border.js';
+
 import './ui/pages/main-page.js';
 import './ui/pages/game-page.js';
 import './ui/pages/summary-page.js';
 
 import events from './ui/events.js';
 
-import jpTerms from './terms/jp.json';
-import idTerms from './terms/id.json';
-
 function main() {
   const container = document.querySelector('main');
   const mainPage = document.createElement('main-page');
 
   window.addEventListener(events.GAME_STARTED_EVENT, e => {
-    container.innerHTML = '';
+    container.innerHTML = '<spinner-border label="Mengambil Soal" class="fullscreen"></spinner-border>';
     const gamePage = document.createElement('game-page');
-    const [jp, id] = shufflePair(jpTerms, idTerms);
-    gamePage.settings = {
-      options: e.detail,
-      questions: { jp, id }
-    };
-    container.appendChild(gamePage);
+    
+    Promise.all([
+      fetch('https://iwanharyatno.github.io/jp-rpl-resources/jp.json').then(response => response.json()),
+      fetch('https://iwanharyatno.github.io/jp-rpl-resources/id.json').then(response => response.json())
+    ]).then(termsAll => {
+      container.innerHTML = '';
+      const [jp, id] = shufflePair(...termsAll);
+      gamePage.settings = {
+        options: e.detail,
+        questions: { jp, id }
+      };
+
+      container.appendChild(gamePage);
+    });
   });
   window.addEventListener(events.GAME_RESTART_EVENT, e => {
     container.innerHTML = '<h1>Quiz Materi Bahasa Jepang</h1>';
