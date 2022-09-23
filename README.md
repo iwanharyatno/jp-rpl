@@ -1,6 +1,8 @@
 # jp-rpl
 Aplikasi Kuis _Single-page_ kosakata Bahasa Jepang XII RPL SMECONE. Berdasarkan kumpulan kata-kata, frasa dan kalimat yang saya dapatkan selama belajar Bahasa Jepang di SMK Negeri 1 Purwokerto.
 
+[https://iwanharyatno.github.io/jp-rpl](https://iwanharyatno.github.io/jp-rpl)
+
 ## Deskripsi
 Aplikasi kuis ini dapat menampilkan kata, frasa maupun kalimat acak sebagai soal, dan macam-macam 'terjemahan' sebagai jawabannya. Pemain harus dapat memilih terjemahan yang paling tepat diantara 4 pilihan yang diberikan.
 
