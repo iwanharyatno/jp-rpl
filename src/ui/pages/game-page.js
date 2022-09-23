@@ -76,7 +76,7 @@ customElements.define('game-page', class extends HTMLElement {
     this._timeBar.addEventListener(events.TIMEOUT_EVENT, () => {
       this._summaries.push(this._questionCard.summary);
       if (!this._running) return;
-      if (this._questionIndex === this._settings.questions.jp.length - 126) {
+      if (this._questionIndex === this._settings.questions.jp.length) {
         window.dispatchEvent(
           new CustomEvent(events.GAME_FINISHED_EVENT, {
             detail: this._summaries
