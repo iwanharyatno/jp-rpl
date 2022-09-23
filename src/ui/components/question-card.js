@@ -70,6 +70,7 @@ customElements.define('question-card', class extends HTMLElement {
         border: 1px solid ${colors.mediumGray};
         user-select: none;
         border-radius: 1rem;
+        font-size: 1rem;
       }
       .answer-box:hover {
         opacity: 0.7;
