@@ -6,11 +6,13 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.js/,
+        test: /\.js$/,
         use: [
           {
             loader: 'babel-loader',
-            presets: ['@babel/preset-env']
+            options: {
+              presets: ['@babel/preset-env']
+            }
           }
         ]
       }
