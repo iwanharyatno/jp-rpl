@@ -28,3 +28,8 @@ Akan ada banyak soal yang akan ditampilkan pada permainan ini, pemain dapat meng
 Setelah permainan selesai atau diberhentikan, pemain akan diberikan ringkasan soal yang sudah dilihat oleh pemain (walaupun tidak dijawab). Dalam kotak ringkasan terdapat pertanyaan, jawaban yang benar, serta jawaban pemain. Latar belakang merah menandakan pemain salah dalam menjawab soal tersbut, dan latar belakang hijau menandakan pemain benar dalam menjawab soal tersebut.
 
 Pemain dapat kembali ke halaman awal dengan menekan tombol 'Kembali' pada pojok kanan atas halaman dan memulai sesi permainan baru.
+
+## Kontribusi
+Segala bentuk perbaikan dalam aplikasi web ini akan sangat diapresiasi. Jangan ragu bagi anda yang ingin memperbaiki atau menutup kekurangan dari aplikasi ini.
+
+Untuk perbaikan di bagian kesalahan penulisan atau pengejaan kata dalam soal dapat dilakukan pada [repositori sumber data](https://github.com/iwanharyatno/jp-rpl-resources).
