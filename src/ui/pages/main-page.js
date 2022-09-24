@@ -16,7 +16,7 @@ customElements.define('main-page', class extends HTMLElement {
     this._intervalInput.setAttribute('label-text', 'Interval (ms)');
     this._intervalInput.setAttribute('type', 'number');
     this._intervalInput.setAttribute('id', 'interval-input');
-    this._intervalInput.setAttribute('value', '1000');
+    this._intervalInput.setAttribute('value', '5000');
 
     this._startButton = document.createElement('x-button');
     this._startButton.setAttribute('variant', 'primary');
