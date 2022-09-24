@@ -74,7 +74,6 @@ customElements.define('game-page', class extends HTMLElement {
     this._timeBar = document.createElement('time-bar');
     this._timeBar.setAttribute('timeout', this._settings.options.interval);
     this._timeBar.addEventListener(events.TIMEOUT_EVENT, () => {
-      this._summaries.push(this._questionCard.summary);
       if (!this._running) return;
       if (this._questionIndex === this._settings.questions.jp.length) {
         window.dispatchEvent(
@@ -84,6 +83,7 @@ customElements.define('game-page', class extends HTMLElement {
         );
         return;
       };
+      this._summaries.push(this._questionCard.summary);
       this._timeBar.setAttribute('timeout', this._settings.options.interval);
       this._next();
     });
